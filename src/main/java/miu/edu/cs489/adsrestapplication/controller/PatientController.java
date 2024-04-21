@@ -37,6 +37,7 @@ public class PatientController {
     }
     @GetMapping(value = "/list")
     public ResponseEntity<List<PatientResponse>> getAllPatients() {
+        System.out.println("get All Patient has been called");
         return ResponseEntity.ok(patientService.getAllPatients());
     }
     @DeleteMapping(value = "/delete/{patientId}")
